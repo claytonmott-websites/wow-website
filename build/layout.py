@@ -1,5 +1,15 @@
 """WOW website — shared layout, components and site data."""
 from html import escape as e
+import hashlib
+import os
+
+_SITE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def asset_version(rel_path):
+    """Short content hash so browsers fetch new CSS/JS whenever it changes."""
+    with open(os.path.join(_SITE_DIR, rel_path), "rb") as f:
+        return hashlib.md5(f.read()).hexdigest()[:8]
 
 SITE = "https://wow.forus.digital"
 
@@ -209,7 +219,7 @@ def page(root, current, title, description, body, image="WOW_Photo_Operator-Sunr
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Figtree:wght@400..800&family=JetBrains+Mono:wght@500;600&display=swap">
-<link rel="stylesheet" href="{root}assets/css/site.css">
+<link rel="stylesheet" href="{root}assets/css/site.css?v={asset_version("assets/css/site.css")}">
 </head>
 <body>
 {header(root, current)}
@@ -217,7 +227,7 @@ def page(root, current, title, description, body, image="WOW_Photo_Operator-Sunr
 {body}
 </main>
 {footer(root)}
-<script src="{root}assets/js/site.js" defer></script>
+<script src="{root}assets/js/site.js?v={asset_version("assets/js/site.js")}" defer></script>
 </body>
 </html>
 """

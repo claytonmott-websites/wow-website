@@ -32,30 +32,21 @@ def home():
 
     body = f"""
 <section class="hero" aria-labelledby="hero-title">
-  <div class="wrap">
-    <div class="hero-top">
-      <div class="hero-copy">
-        <span class="eyebrow">Wealth on Wheels · Eastern Cape</span>
-        <h1 class="display" id="hero-title">Crafted and <span class="hl">owned</span> by the public transport industry.</h1>
-      </div>
-      <div class="hero-side">
-        <p class="lead">WOW is South Africa’s largest collectively owned public transport structure: one wallet, ten focus areas, and a digital platform the public transport industry owns outright.</p>
-        <div class="btns">{btn("Explore the platform", "platform.html")}{btn("Why WOW", "why-wow.html", "secondary", False)}</div>
-        <p class="muted" style="font-size:15px">Fintech Innovation of the Year, Africa Tech Festival 2024</p>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <figure class="hero-wide">
-        <img src="{R}assets/img/WOW_Photo_Operator-Sunrise.jpg" srcset="{R}assets/img/WOW_Photo_Operator-Sunrise-960.jpg 960w, {R}assets/img/WOW_Photo_Operator-Sunrise.jpg 1672w" sizes="(max-width: 1240px) 100vw, 1144px" width="1672" height="941" alt="A public transport operator uses the WOW app on his phone beside his minibus at a fuel forecourt at sunrise, linked to icons for tracking, safety cameras, fuel and the wallet" fetchpriority="high" decoding="async">
-        <span class="tab red">#Siyabangena</span>
-      </figure>
-      <div class="hero-card"><b class="num">~67 000</b><span>public transport operators, organised as one</span></div>
+  <figure class="hero-media">
+    <img src="{R}assets/img/WOW_Photo_Operator-Sunrise.jpg" srcset="{R}assets/img/WOW_Photo_Operator-Sunrise-960.jpg 960w, {R}assets/img/WOW_Photo_Operator-Sunrise.jpg 1672w" sizes="100vw" width="1672" height="941" alt="A public transport operator uses the WOW app on his phone beside his minibus at a fuel forecourt at sunrise, linked to icons for tracking, safety cameras, fuel and the wallet" fetchpriority="high" decoding="async">
+  </figure>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Wealth on Wheels · Eastern Cape</span>
+      <h1 class="display" id="hero-title">Crafted and <span class="hl">owned</span> by the public transport industry.</h1>
+      <p class="lead">South Africa’s largest collectively owned public transport structure: one wallet, ten focus areas, and a digital platform the industry owns outright.</p>
+      <div class="btns">{btn("Explore the platform", "platform.html")}{btn("Why WOW", "why-wow.html", "outline-white", False)}</div>
     </div>
   </div>
 </section>
 
-<section class="sec tight" aria-label="WOW in numbers" style="padding-top:0">
-  <div class="wrap">{stats([("~105 000", "Vehicles on the network"), ("~1/3", "Of South Africa’s national fleet"), ("120 000+", "Scholars transported every school day"), ("186 / 45", "Primary and secondary co-operatives")])}</div>
+<section class="sec tight" aria-label="WOW in numbers">
+  <div class="wrap">{stats([("~67 000", "Public transport operators, organised as one"), ("~105 000", "Vehicles on the network"), ("120 000+", "Scholars transported every school day"), ("~1/3", "Of South Africa’s national fleet")])}</div>
 </section>
 
 <section class="sec chalk" aria-labelledby="platform-title">
