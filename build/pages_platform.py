@@ -8,7 +8,7 @@ CONTENT = {
     "wallet": dict(
         headline='Your money, <span class="hl">your wallet</span>, your co-op.',
         intro="Every rand in WOW lives in the industry’s own regulated digital wallet, run for the co-operative, not for a bank. It’s the foundation every other focus area is built on.",
-        photo=("WOW_Photo_Commuter-Cashless-Payment.jpg", "A commuter pays her fare by phone at the taxi window"),
+        photo=("WOW_Photo_Commuter-Cashless-Payment.jpg", "A commuter pays her fare by phone at the driver’s window"),
         role="owner", features_title="Built like a bank. Owned by the industry.",
         features=[("Backed 1:1 by real rands", "Every unit in the wallet is matched by a real rand held in independent custody with one of South Africa’s largest asset managers. Your money is always your money."),
                   ("Your balance earns while it sits", "Wallet balances earn yield linked to money-market rates, the kind of return usually reserved for big corporates."),
@@ -27,31 +27,31 @@ CONTENT = {
     "fuel": dict(
         headline='The fuel you already buy <span class="hl">now pays you back.</span>',
         intro="Fuel is the first focus area every operator feels in the pocket, and it rests on a simple principle: the industry finally negotiating as one.",
-        photo=("WOW_Photo_WOW-Fuel-Forecourt.jpg", "A WOW Fuel attendant fills a taxi while talking with the owner"),
+        photo=("WOW_Photo_WOW-Fuel-Forecourt.jpg", "A WOW Fuel attendant fills a minibus while talking with the owner"),
         role="owner", features_title="One fleet, finally recognised.",
         features=[("One fleet, at last", "For decades the industry’s enormous daily fuel spend was invisible, bought one tank at a time by fragmented owners. WOW aggregates that spend so the industry is seen as the single fleet it truly is."),
                   ("The recognition smaller fleets always had", "Private fleets a fraction of this size have always earned rebates on fuel. Collective scale earns the industry the same recognition, and more."),
                   ("The WOW Fuel Rebate Network", "Participating fuel sites across the Eastern Cape, in partnership with BT-Corp, with your WOW tag as the key."),
                   ("Savings flow back through the co-op", "Every rebate flows back through the co-operative structure the industry owns, to operators, associations and co-ops, on rules the industry sets.")],
-        highlight=("Launching September 2026 in Komani.", "The WOW Fuel Rebate Network starts in Komani (Queenstown), then rolls out province-wide. No new cost. No cash.", ("Register your interest", "get-involved.html?role=owner"))),
+        highlight=("Launching September 2026 in Komani.", "The WOW Fuel Rebate Network starts in Komani (Queenstown), then rolls out province-wide. No new cost. No cash.", ("Register your interest", "get-involved.html"))),
     "mobile": dict(
         headline='The industry’s own <span class="hl">mobile network.</span>',
-        intro="WOW Mobile is the key to owning customer relationships, and to turning taxis into connected business units that do far more than transport.",
+        intro="WOW Mobile is the key to owning customer relationships, and to turning every vehicle into a connected business unit that does far more than transport.",
         photo=("WOW_Photo_Agent-At-The-Rank.jpg", "A WOW Agent helps a driver set up a WOW Mobile SIM"),
         role="commuter", features_title="Connectivity that keeps the margin home.",
         features=[("SIMs sold at the rank", "Affordable SIMs from WOW Agents right where you work, for drivers, owners, commuters and their families."),
                   ("Data that doesn’t expire", "Buy what you need, when you can. Your data stays yours until you use it. No more airtime lost at month-end."),
                   ("A data-free app", "Manage your wallet, rewards and account without using a single megabyte, and earn free data by watching ads or completing surveys."),
                   ("The margin comes home", "Every SIM sold and every top-up made earns for the industry. Money that used to leave the province now stays in it.")],
-        highlight=("Transport is just the beginning.", "When the industry owns the network, every taxi becomes a connected business unit.", ("See WOW-Fi", "platform/wow-fi.html"))),
+        highlight=("Transport is just the beginning.", "When the industry owns the network, every vehicle becomes a connected business unit.", ("See WOW-Fi", "platform/wow-fi.html"))),
     "track": dict(
         headline='Fleet control and cashless fares <span class="hl">in one system.</span>',
-        intro="Across minibus taxis, e-hailing and buses, WOW Cashless + WOW-Track deliver a truly Integrated Public Transport Management System (IPTMS) to commuters.",
-        photo=("WOW_Photo_Field-Operations.jpg", "A WOW field technician checks a taxi at the rank"),
+        intro="Across buses, minibuses, bakkies, scholar transport and e-hailing, WOW Cashless + WOW-Track deliver a truly Integrated Public Transport Management System (IPTMS) to commuters.",
+        photo=("WOW_Photo_Field-Operations.jpg", "A WOW field technician checks a vehicle at the rank"),
         role="owner", features_title="See every vehicle. Record every fare.",
         features=[("Your fleet, on screen", "Live GPS on every vehicle, onboard cameras for safer drivers and passengers, and fuel consumption tracked at the tank, so theft has nowhere to hide."),
                   ("Every fare, on the record", "Card, app, QR or USSD: commuters pay cashless even on the simplest phone. Less cash in the vehicle means less risk on the road."),
-                  ("Taxis, e-hailing and buses together", "One platform across every mode the co-operative runs, the integrated view no city system has achieved at this scale."),
+                  ("Every mode, together", "One platform across every mode the co-operative runs, the integrated view no city system has achieved at this scale."),
                   ("Trusted records become bankable records", "Every recorded trip is proof of income: statements, credit history, and a path to vehicle finance that cash could never open.")],
         highlight=("From Gqeberha to Mthatha to Aliwal North.", "Every route the industry drives across the Eastern Cape, running on one integrated system.", ("The destination: a world-class IPTMS", "platform.html#destination"))),
     "luckyx": dict(
@@ -62,29 +62,29 @@ CONTENT = {
                   ("Explicitly not gambling", "No stake is placed and nothing is ever put at risk. LuckyX is a sweepstake run on participation, not a wager."),
                   ("Works on any phone", "No smartphone and no data needed. Every commuter can take part on the handset they already own."),
                   ("Sponsors pay. Your passengers win.", "Major retailers fund the prizes to reach your commuters. The industry provides the audience.")],
-        highlight=("Brands fund the prizes.", "Reach millions of daily commuters with rewards they actually earned.", ("Partner with LuckyX", "get-involved.html?role=brand"))),
+        highlight=("Brands fund the prizes.", "Reach millions of daily commuters with rewards they actually earned.", ("Partner with LuckyX", "get-involved.html"))),
     "merchants": dict(
         headline='Rank shops and spazas, <span class="hl">cashless.</span>',
-        intro="For rank shops, spazas, suppliers and every merchant in the taxi economy: the bridge that drives commuters to retailers and keeps money circulating in the community.",
+        intro="For rank shops, spazas, suppliers and every merchant in the public transport economy: the bridge that drives commuters to retailers and keeps money circulating in the community.",
         photo=None, role="other", features_title="The whole business in one device.",
         features=[("The whole business, in one system", "POS and card machine in one device, an online store out of the box, and quotes, invoices and receipts by print, SMS or email."),
                   ("Stock and numbers under control", "Inventory with a built-in barcode scanner, sales history, refunds, reporting and business analytics."),
                   ("Keep them coming back", "Loyalty and customer tools that grow repeat trade, with commuter wallets spending where the community lives."),
-                  ("The retail connection", "Merchants plug into the same wallet the commuters carry, the bridge between the taxi economy and formal retail.")],
-        highlight=("Money earned in the community stays in the community.", "Every cashless sale keeps value circulating locally, on the industry’s own rails.", ("Get your business on WOW", "get-involved.html?role=other"))),
+                  ("The retail connection", "Merchants plug into the same wallet the commuters carry, the bridge between the public transport economy and formal retail.")],
+        highlight=("Money earned in the community stays in the community.", "Every cashless sale keeps value circulating locally, on the industry’s own rails.", ("Get your business on WOW", "get-involved.html"))),
     "wow-fi": dict(
         headline='Free WiFi for them. <span class="hl">A media business for you.</span>',
-        intro="WOW-Fi turns every taxi and every rank into connected space the industry owns: free connectivity for commuters, and a media channel for the platform’s owners.",
+        intro="WOW-Fi turns every vehicle and every rank into connected space the industry owns: free connectivity for commuters, and a media channel for the platform’s owners.",
         photo=None, role="brand", features_title="The audience no other channel can match.",
-        features=[("Commuters ride connected", "Free WiFi on board makes your taxis the ride people choose, and keeps them loyal to your routes."),
-                  ("An audience no channel can match", "10,7 million South Africans ride minibus taxis every day. Brands will pay to reach them on WiFi the industry controls."),
-                  ("The revenue is yours", "Every taxi becomes a media channel owned by the platform you own, with advertising income flowing back to the industry."),
+        features=[("Commuters ride connected", "Free WiFi on board makes your vehicles the ride people choose, and keeps them loyal to your routes."),
+                  ("An audience no channel can match", "10,7 million South Africans ride public transport every day. Brands will pay to reach them on WiFi the industry controls."),
+                  ("The revenue is yours", "Every vehicle becomes a media channel owned by the platform you own, with advertising income flowing back to the industry."),
                   ("Value-added services", "Insurance, mobile top-ups and deals on goods and services, delivered over the connection the industry provides.")],
-        highlight=("10,7 million riders. Every day.", "Advertise on the connection commuters choose, owned by the industry that carries them.", ("Advertise on WOW-Fi", "get-involved.html?role=brand"))),
+        highlight=("10,7 million riders. Every day.", "Advertise on the connection commuters choose, owned by the industry that carries them.", ("Advertise on WOW-Fi", "get-involved.html"))),
     "scholar": dict(
         headline='Safe children. Paid operators. <span class="hl">Accountable spend.</span>',
         intro="More than 120 000 scholars ride with the industry every school day. WOW solves what paper registers never could, with palm-vein biometrics: contactless, hygienic and impossible to forge.",
-        photo=("WOW_Photo_Scholars-Palm-Scan.jpg", "A learner scans her palm to board a scholar transport taxi"),
+        photo=("WOW_Photo_Scholars-Palm-Scan.jpg", "A learner scans her palm to board scholar transport"),
         role="government", features_title="One scan answers who, where and when.",
         features=[("Parents & guardians", "Real-time alerts when their child boards and alights, with location attached: certainty their child was on the right vehicle, every day."),
                   ("Transport operators", "Trips logged automatically and invoices generated from verified trip data. No paper registers, and payment for the trips actually run, on time."),
@@ -95,16 +95,16 @@ CONTENT = {
                ("Scan off", "A second scan on alighting closes the trip record, validated inside the school’s geofence."),
                ("Parents notified", "Instant boarding and drop-off alerts with location. Peace of mind, every day.")],
         stats=[("< 0,5 s", "Per scan, so no queues at the door"), ("0", "Cards or tags to lose, lend or steal"), ("100%", "Of trips logged, geo-stamped and auditable"), ("120 000+", "Scholars transported every school day")],
-        highlight=("One device. Every answer.", "The onboard terminal pairs a palm-vein sensor with GPS and always-on connectivity, fast enough for a full taxi at the door, with store-and-forward for rural dead zones.", ("Talk to us about scholar transport", "get-involved.html?role=government"))),
+        highlight=("One device. Every answer.", "The onboard terminal pairs a palm-vein sensor with GPS and always-on connectivity, fast enough for a full vehicle at the door, with store-and-forward for rural dead zones.", ("Talk to us about scholar transport", "get-involved.html"))),
     "wow-go": dict(
         headline='South Africa’s own <span class="hl">e-hailing.</span>',
         intro="E-hailing and deliveries on the industry’s own platform: proudly South African, built for our country, answering to its members instead of shareholders overseas.",
         photo=None, role="driver", features_title="The commission stays home.",
         features=[("SA’s own e-hailing app", "Around 15 000 e-hailing members have already joined the co-operative. WOW-Go gives them an industry-owned way to work."),
                   ("The commission stays home", "The cut that used to leave the province, and the country, now stays inside the co-operative and its members."),
-                  ("Deliveries between peaks", "Taxis and e-hailing vehicles earn from township last-mile deliveries in the quiet hours, built for how South Africa actually moves."),
+                  ("Deliveries between peaks", "Minibuses, bakkies and e-hailing vehicles earn from township last-mile deliveries in the quiet hours, built for how South Africa actually moves."),
                   ("One wallet for everything", "Fares, fuel, rewards and payouts land in the same WOW wallet: one balance, one statement, one owner.")],
-        highlight=("~15 000 e-hailing members already in.", "Drive for a platform you own, not one that answers to shareholders overseas.", ("Join WOW-Go", "get-involved.html?role=driver"))),
+        highlight=("~15 000 e-hailing members already in.", "Drive for a platform you own, not one that answers to shareholders overseas.", ("Join WOW-Go", "get-involved.html"))),
 }
 
 
@@ -124,7 +124,7 @@ def area_page(i):
                      aside=visual, ground="", route_color=None, cls="fa-hero")
     hero = hero.replace('<div class="btns"></div>', '')
     hero = hero.replace('<p class="lead">', f'<div style="display:flex;gap:10px;flex-wrap:wrap">{tab(a["short"], accent)}</div><p class="lead">', 1)
-    hero = hero.replace('</p></div>\n      <div>', f'</p><div class="btns">{btn("Get involved", root + "get-involved.html?role=" + c["role"])}{btn("All focus areas", root + "platform.html", "secondary", False)}</div></div>\n      <div>', 1)
+    hero = hero.replace('</p></div>\n      <div>', f'</p><div class="btns">{btn("Get involved", root + "get-involved.html")}{btn("All focus areas", root + "platform.html", "secondary", False)}</div></div>\n      <div>', 1)
 
     feats = "".join(f'<article class="feature"><h3><span class="dot {accent}"></span>{e(t)}</h3><p>{e(d)}</p></article>' for t, d in c["features"])
     body = hero + f"""

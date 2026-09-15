@@ -192,6 +192,9 @@ body.menu-open{overflow:hidden}
 @media (max-width:640px){.grid2,.grid3,.grid4{grid-template-columns:1fr}}
 .card{background:var(--chalk);border-radius:var(--r-lg);padding:clamp(24px,2.6vw,32px);display:flex;flex-direction:column;gap:12px;min-width:0}
 .chalk .card{background:#fff}
+.card.tar,.chalk .card.tar{background:var(--tar);color:#fff}
+.card.ox,.chalk .card.ox{background:var(--oxblood);color:#fff}
+a.card.tar:hover,a.card.ox:hover{color:#fff}
 .tar .card{background:var(--tar-2)}
 .tar .card p{color:#D9D1CE}
 .card h3{font:800 22px/1.15 var(--display);letter-spacing:-.01em}

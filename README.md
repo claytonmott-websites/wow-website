@@ -13,8 +13,8 @@ A static HTML website built on the WOW Brand Guidelines v2.0 (September 2026). N
 | Who it's for | `who-its-for.html` | Owners, drivers, commuters, associations & co-ops, brands, government |
 | Partners | `partners.html` | Ecentric, FORUS Digital, BT-Corp, True Value Systems, the eZAR money layer |
 | News | `news.html` | Awards and press coverage |
-| Investors | `investors.html` | Investment case and data room access request |
-| Get involved | `get-involved.html` | Contact form with role selection |
+| Investors | `investors.html` | Investment case; links to the investor data room (`/investors`) |
+| Get involved | `get-involved.html` | Ways in: investor data room, WOW portal sign-in (`/backoffice`), audience routes |
 
 ## Editing
 
@@ -41,7 +41,7 @@ python3 -m http.server 8770
 
 ## Before launch
 
-1. **Connect the forms.** `get-involved.html` and `investors.html` use `data-endpoint=""`. Set it to a form handler (your API, Formspree, HubSpot) or the forms will show "sent" without sending anything.
+1. **Add the remaining internal links.** The site has no forms. Calls to action link to the WOW apps: the investor data room (`https://wow.forus.digital/investors`) and the WOW portal (`https://wow.forus.digital/backoffice`). Add links for any other flows (for example owner or driver registration) on `get-involved.html`.
 2. **Replace the photography.** The six images in `assets/img/` are AI-generated concepts. Commission real photography (see brand guide chapter 06) and keep the same file names.
 3. **Confirm facts and figures** with ECTTC, especially the stats, launch dates and partner descriptions.
 4. **Add the missing pages**: privacy policy (POPIA), terms, and the investor data room sign-in if it stays on this domain.

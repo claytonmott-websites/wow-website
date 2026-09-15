@@ -30,7 +30,7 @@ AUD = {
         ("Data that doesn’t expire", "Affordable SIMs sold at the rank, with data that stays yours until you use it.", "mobile")]),
     "commuters": ("Pay, connect and win <span class=\"hl\">on the ride you take.</span>", "WOW makes every trip simpler and more rewarding, on the phone you already own.", "commuter", [
         ("Pay on any phone", "No cash needed. Pay by card, app, QR or USSD, even on the simplest handset.", "track"),
-        ("Free WiFi on board", "Ride connected on taxis and at ranks with WOW-Fi.", "wow-fi"),
+        ("Free WiFi on board", "Ride connected on board and at ranks with WOW-Fi.", "wow-fi"),
         ("Win real prizes", "Riding, topping up and spending earn LuckyX entries. Never bought, never gambling.", "luckyx"),
         ("Scholars get home safely", "Parents get an alert when their child boards and arrives.", "scholar")]),
     "associations": ("Your co-op. Your rules. <span class=\"hl\">Enforced.</span>", "WOW records the structure your members built and runs it automatically, on every transaction.", "association", [
@@ -38,13 +38,13 @@ AUD = {
         ("Splits enforced in code", "Operator, association and co-op shares run exactly as you set them.", "wallet"),
         ("Help at your rank", "WOW Agents register members, top up wallets and train people where they work.", "connect"),
         ("Rebates flow back to you", "Fuel savings return through the co-operative structure you own.", "fuel")]),
-    "brands": ("Reach <span class=\"hl\">10,7 million riders</span> a day.", "Minibus taxis carry more South Africans than any other channel. WOW lets brands reach them in ways commuters welcome.", "brand", [
-        ("Advertise on WOW-Fi", "Reach commuters on the free WiFi they choose, on taxis and at ranks.", "wow-fi"),
+    "brands": ("Reach <span class=\"hl\">10,7 million riders</span> a day.", "Public transport carries more South Africans than any other channel. WOW lets brands reach them in ways commuters welcome.", "brand", [
+        ("Advertise on WOW-Fi", "Reach commuters on the free WiFi they choose, on board and at ranks.", "wow-fi"),
         ("Sponsor LuckyX prizes", "Fund rewards that commuters earn by riding, topping up and spending.", "luckyx"),
-        ("Connect to rank retail", "Drive commuter wallets to merchants in the taxi economy.", "merchants")]),
+        ("Connect to rank retail", "Drive commuter wallets to merchants in the public transport economy.", "merchants")]),
     "government": ("Accountable public transport, <span class=\"hl\">from the rank up.</span>", "WOW gives departments and municipalities verified data and a formal partner that represents the industry.", "government", [
         ("Verified scholar transport", "Biometric proof of every trip, with ghost-learner claims designed out.", "scholar"),
-        ("An integrated transport system", "Taxis, buses and e-hailing on one platform, with live fleet visibility.", "track"),
+        ("An integrated transport system", "Buses, minibuses, bakkies, scholar transport and e-hailing on one platform, with live fleet visibility.", "track"),
         ("One organised counterpart", "A provincial co-operative with mandate, legitimacy and reach.", ""),
         ("A national template", "A model built in the Eastern Cape, ready to replicate province by province.", "")]),
 }
@@ -63,7 +63,7 @@ def who():
       {tab(labels[slug], "red" if i % 2 == 0 else "")}
       <h2 class="h2" id="{slug}-title">{title}</h2>
       <p class="lead">{e(lead)}</p>
-      {btn("Get involved", f"{R}get-involved.html?role={role}")}
+      {btn("Get involved", f"{R}get-involved.html")}
     </div>
     {benefit_list(items)}
   </div>
@@ -79,14 +79,14 @@ def who():
     <div style="display:grid;gap:20px;justify-items:start"><p class="lead">The WOW data room is open by invitation and includes the Eastern Cape Transport Bond.</p>{btn("Investor information", R + "investors.html", "white")}</div>
   </div>
 </section>"""
-    return page(R, "who-its-for", "Who it’s for", "What WOW offers taxi owners, drivers, commuters, associations and co-ops, brands and government.", body,
+    return page(R, "who-its-for", "Who it’s for", "What WOW offers owners and operators, drivers, commuters, associations and co-ops, brands and government.", body,
                 image="WOW_Photo_Agent-At-The-Rank.jpg", path="who-its-for.html")
 
 
 # ------------------------------------------------------------------ PARTNERS
 def partners():
     rows = [
-        ("Technology partner & system operator", "Ecentric Payment Systems", "The payment backbone of South African retail, processing more than R1 trillion for the country’s largest retailers, now pointed at the taxi economy. Ecentric runs the switch, the settlement and the waterfall: every split enforced in code, on every transaction, from the forecourt to final settlement. Five years assessing this industry before a cent was committed."),
+        ("Technology partner & system operator", "Ecentric Payment Systems", "The payment backbone of South African retail, processing more than R1 trillion for the country’s largest retailers, now pointed at the public transport economy. Ecentric runs the switch, the settlement and the waterfall: every split enforced in code, on every transaction, from the forecourt to final settlement. Five years assessing this industry before a cent was committed."),
         ("Ecosystem & business model", "FORUS Digital", "The architect of the WOW ecosystem and its business model: the WOW Connect app, the agent network, rewards and the commercial engine that turns platform activity into livelihoods. FORUS designs how the pieces earn together, so value created by the industry flows back to the industry."),
         ("Fuel rebate partner", "BT-Corp", "Aggregates the industry’s fuel spend and operates the rebate programme across the WOW Fuel Rebate Network."),
         ("GPS & mobility technology innovation partner", "True Value Systems", "The innovation force behind WOW-Track, onboard devices, biometrics and the scholar transport hardware: mobility technology built for South African conditions."),
@@ -116,11 +116,11 @@ def partners():
 # ------------------------------------------------------------------ NEWS
 def news():
     press = [
-        ("ITWeb", "2024-11-20", "20 Nov 2024", "Taxi industry enters SA’s MVNO market with WOW Mobile", "The South African taxi industry has become the latest player to provide a local mobile virtual network operator offering.", "https://www.itweb.co.za/article/taxi-industry-enters-sas-mvno-market-with-wow-mobile/O2rQGqAEb9zqd1ea"),
-        ("Africa Business", "2024-07-25", "25 Jul 2024", "Industry-led tech solution designed to bring SA’s minibus taxis into the digital age", "WOW aims to revolutionise the local minibus taxi industry through technologies such as digital cash payments and blockchain.", "https://africabusiness.com/2024/07/25/industry-led-tech-solution-designed-to-bring-sas-minibus-taxis-into-the-digital-age/"),
+        ("ITWeb", "2024-11-20", "20 Nov 2024", "Taxi industry enters SA’s MVNO market with WOW Mobile", "The industry has become the latest player to launch its own mobile virtual network operator (MVNO).", "https://www.itweb.co.za/article/taxi-industry-enters-sas-mvno-market-with-wow-mobile/O2rQGqAEb9zqd1ea"),
+        ("Africa Business", "2024-07-25", "25 Jul 2024", "Industry-led tech solution designed to bring SA’s minibus taxis into the digital age", "WOW brings the public transport industry into the digital age with digital payments and blockchain technology.", "https://africabusiness.com/2024/07/25/industry-led-tech-solution-designed-to-bring-sas-minibus-taxis-into-the-digital-age/"),
         ("ITWeb", "2024-07-11", "11 Jul 2024", "Eastern Cape readies digital taxi initiative", "The ECTTC is preparing to officially launch the Wealth on Wheels Cashless and Digitisation Project across the Eastern Cape.", "https://www.itweb.co.za/article/eastern-cape-readies-digital-taxi-initiative/lLn14MmQ2Q1MJ6Aa"),
-        ("TechFinancials", "2024-07-10", "10 Jul 2024", "Digital taxi initiative WOWs SA Transport Conference", "Delegates at the 42nd Southern African Transport Conference found colourful minibus taxis parked inside the venue foyer.", "https://techfinancials.co.za/2024/07/10/digital-taxi-initiative-wows-sa-transport-conference/"),
-        ("ITWeb", "2023-09-06", "6 Sept 2023", "‘Wealth on Wheels’ digital payments target Eastern Cape taxis", "The ECTTC partnered with Forus Digital Group and Ecentric Payment Solutions to introduce a digital platform for taxi commuters.", "https://www.itweb.co.za/article/wealth-on-wheels-digital-payments-target-ecape-taxis/GxwQDM1DpnO7lPVo"),
+        ("TechFinancials", "2024-07-10", "10 Jul 2024", "Digital taxi initiative WOWs SA Transport Conference", "Delegates at the 42nd Southern African Transport Conference found WOW-branded vehicles parked inside the venue foyer.", "https://techfinancials.co.za/2024/07/10/digital-taxi-initiative-wows-sa-transport-conference/"),
+        ("ITWeb", "2023-09-06", "6 Sept 2023", "‘Wealth on Wheels’ digital payments target Eastern Cape taxis", "The ECTTC partnered with Forus Digital Group and Ecentric Payment Solutions to introduce a digital platform for public transport commuters.", "https://www.itweb.co.za/article/wealth-on-wheels-digital-payments-target-ecape-taxis/GxwQDM1DpnO7lPVo"),
     ]
     items = "".join(f'<a href="{u}" target="_blank" rel="noopener"><span class="src">{e(s)}</span><time datetime="{d}">{e(dl)}</time><div><h3>{e(t)}</h3><p>{e(x)}</p></div>{ic("ext", "Opens in a new tab")}</a>' for s, d, dl, t, x, u in press)
     body = page_hero(R, "In the news", 'Recognised across <span class="hl">Africa’s tech and business media.</span>',
@@ -131,7 +131,7 @@ def news():
     <div class="sec-head"><span class="eyebrow">Awards</span><h2 class="h2" id="awards-title">Two firsts in 2024.</h2></div>
     <div class="grid2">
       <article class="award"><span class="yr">Africa Tech Festival 2024 · Cape Town</span>{tab("Winner", "red")}<h3>Fintech Innovation of the Year</h3><p>Recognising WOW as a breakthrough financial technology for the African continent.</p></article>
-      <article class="award"><span class="yr">SATC 2024 · 42nd Southern African Transport Conference</span>{tab("Winner", "red")}<h3>Best Exhibition Stand</h3><p>The first time a taxi industry solution has won this award.</p></article>
+      <article class="award"><span class="yr">SATC 2024 · 42nd Southern African Transport Conference</span>{tab("Winner", "red")}<h3>Best Exhibition Stand</h3><p>The first time a public transport industry solution has won this award.</p></article>
     </div>
   </div>
 </section>
@@ -145,18 +145,24 @@ def news():
 
 
 # ------------------------------------------------------------------ INVESTORS
+DATA_ROOM = "https://wow.forus.digital/investors"
+PORTAL = "https://wow.forus.digital/backoffice"
+
+
 def investors():
-    steps = [("Request access", "Tell us who you are and which organisation you represent."), ("We verify", "The WOW team confirms your details and investor status."),
-             ("Receive your code", "You get a personal invite code with a set access period."), ("Enter the data room", "Review documents, including the Eastern Cape Transport Bond.")]
+    steps = [("Receive your access code", "The WOW investment team issues a personal code to verified investors."),
+             ("Open the data room", "Go to the WOW investor data room and enter your code."),
+             ("Review the documents", "Evaluate the opportunity, including the Eastern Cape Transport Bond."),
+             ("Keep it confidential", "Contents are for evaluating a potential investment only, and may not be shared without written consent.")]
     body = page_hero(R, "Investors", 'Invest in the industry’s <span class="hl">own infrastructure.</span>',
                      "WOW’s investor data room is open by invitation. It includes the Eastern Cape Transport Bond.",
                      [("Investors", None)], ground="ox", route_color="#4E1618")
-    body = body.replace('</p></div>\n      ', f'</p><div class="btns">{btn("Request access", "#request", "white")}</div></div>\n      ', 1)
+    body = body.replace('</p></div>\n      ', f'</p><div class="btns">{btn("Enter the data room", DATA_ROOM, "white")}</div></div>\n      ', 1)
     body += f"""
 <section class="sec" aria-labelledby="case-title">
   <div class="wrap">
     <div class="sec-head"><span class="eyebrow">The case</span><h2 class="h2" id="case-title">Scale that’s already organised.</h2></div>
-    {stats([("~105 000", "Minibus taxis on the network"), ("~67 000", "Operators organised as one"), ("~1/3", "Of the national fleet"), ("R1 trillion+", "Processed annually by our payments partner")])}
+    {stats([("~105 000", "Vehicles on the network"), ("~67 000", "Operators organised as one"), ("~1/3", "Of the national fleet"), ("R1 trillion+", "Processed annually by our payments partner")])}
     <div class="grid3" style="margin-top:48px">
       <article class="card"><h3>Adoption solved first</h3><p>Collective ownership and endorsement across the market before a single device is deployed.</p></article>
       <article class="card"><h3>Owned financial rails</h3><p>A regulated wallet backed 1:1 by real rands, run on central-bank-grade settlement.</p></article>
@@ -165,65 +171,59 @@ def investors():
     <p style="margin-top:32px">{more("Why WOW can’t be copied", R + "why-wow.html")}</p>
   </div>
 </section>
-<section class="sec chalk" id="request" aria-labelledby="req-title">
+<section class="sec chalk" id="data-room" aria-labelledby="req-title">
   <div class="wrap split" style="align-items:start">
     <div style="display:grid;gap:28px">
       <div style="display:grid;gap:16px"><span class="eyebrow">Data room access</span><h2 class="h2" id="req-title">How access works.</h2></div>
       <ol class="steps" style="grid-template-columns:1fr 1fr;list-style:none;padding:0;margin:0">{"".join(f'<li class="step"><span class="sn" aria-hidden="true">{i}</span><h3>{e(t)}</h3><p>{e(d)}</p></li>' for i, (t, d) in enumerate(steps, 1))}</ol>
     </div>
-    <div class="form-card">
-      <form class="form" data-form data-done="#inv-done" data-endpoint="">
-        <div class="field"><label for="inv-name">Full name <span class="req">*</span></label><input id="inv-name" name="name" autocomplete="name" required><span class="err">Enter your full name.</span></div>
-        <div class="field"><label for="inv-org">Organisation <span class="req">*</span></label><input id="inv-org" name="organisation" autocomplete="organization" required><span class="err">Enter your organisation.</span></div>
-        <div class="field full"><label for="inv-email">Work email <span class="req">*</span></label><input id="inv-email" name="email" type="email" autocomplete="email" required><span class="err">Enter a valid email address, like name@company.co.za.</span></div>
-        <div class="field full"><label for="inv-type">Investor type <span class="req">*</span></label><select id="inv-type" name="investor_type" required><option value="">Choose one</option><option>Asset manager</option><option>Development finance institution</option><option>Bank</option><option>Private equity or venture</option><option>Other</option></select><span class="err">Choose an investor type.</span></div>
-        <div class="field full"><label for="inv-msg">What are you interested in?</label><textarea id="inv-msg" name="message"></textarea></div>
-        <p class="field full check"><input type="checkbox" id="inv-ok" required><label for="inv-ok">I agree that WOW may contact me about data room access.</label></p>
-        <div class="field full"><button class="btn btn-primary" type="submit">Request access</button><p class="err" data-form-error hidden style="display:block;color:var(--red-deep)">We couldn’t send your request. Check your connection and try again.</p></div>
-      </form>
-      <div class="form-done" id="inv-done" tabindex="-1" hidden>{tab("Request received", "green")}<h3 class="h3">Thank you. We’ll be in touch.</h3><p class="muted">The WOW team will verify your details and email your invite code.</p></div>
+    <div class="card ox" style="padding:clamp(28px,4vw,48px);gap:20px;position:relative;overflow:hidden">
+      {route("#4E1618", 2, 60, style="right:-22%;bottom:-40%;width:62%")}
+      <div style="position:relative;display:grid;gap:18px;justify-items:start">
+        {tab("Restricted access", "red")}
+        <h3 class="h3" style="color:#fff">WOW investor data room</h3>
+        <p style="color:#E9D6D4">Enter your access code to view confidential documents, including the Eastern Cape Transport Bond.</p>
+        {btn("Enter the data room", DATA_ROOM, "white")}
+        <p style="color:#E9D6D4;font-size:15px">No access code? Contact the WOW investment team.</p>
+      </div>
     </div>
   </div>
 </section>"""
-    return page(R, "investors", "Investors", "Request access to the WOW investor data room, including the Eastern Cape Transport Bond.", body, path="investors.html")
+    return page(R, "investors", "Investors", "The WOW investor data room, including the Eastern Cape Transport Bond. Access is by invitation.", body, path="investors.html")
 
 
 # ------------------------------------------------------------------ GET INVOLVED
 def get_involved():
-    roles = [("owner", "Taxi owner or fleet owner"), ("driver", "Driver"), ("commuter", "Commuter"), ("association", "Association or co-op"),
-             ("government", "Government or municipality"), ("brand", "Brand or sponsor"), ("investor", "Investor or funder"), ("other", "Merchant or other")]
+    portals = [
+        ("Investors", "Enter the WOW investor data room with your access code.", DATA_ROOM, "Enter the data room", "ox"),
+        ("Co-ops, agents & WOW teams", "Sign in to the WOW portal to manage members, vehicles, captures and approvals.", PORTAL, "Sign in to the portal", "tar"),
+    ]
+    portal_cards = "".join(
+        f'<a class="card {ground}" href="{href}" style="padding:clamp(28px,3.5vw,44px);gap:16px;color:#fff">{tab("WOW portal", "red")}'
+        f'<h3 style="font-size:clamp(26px,2.6vw,34px);color:#fff">{e(t)}</h3><p style="color:#E9D6D4">{e(d)}</p>'
+        f'<span class="more" style="color:#fff">{e(label)}{ic("arrow")}</span></a>'
+        for t, d, href, label, ground in portals)
+    routes_ = [(slug, label, AUD[slug][1]) for slug, label in AUDIENCES]
+    route_cards = "".join(
+        f'<a class="card path" href="{R}who-its-for.html#{slug}"><h3>{e(label)}</h3><p>{e(lead)}</p><span class="more">See what WOW offers{ic("arrow")}</span></a>'
+        for slug, label, lead in routes_)
     body = page_hero(R, "Get involved", 'Siyabangena. <span class="hl">Let’s get you in.</span>',
-                     "Tell us who you are and what you need. The right WOW team will be in touch.", [("Get involved", None)])
+                     "Choose your way in. Every link below takes you straight to the right place.", [("Get involved", None)])
     body += f"""
-<section class="sec" aria-labelledby="form-title">
-  <div class="wrap split" style="align-items:start">
-    <div class="form-card" style="box-shadow:none;border:1px solid var(--stone)">
-      <h2 class="h3" id="form-title" style="margin-bottom:24px">Send us a message</h2>
-      <form class="form" data-form data-done="#done" data-endpoint="">
-        <div class="field"><label for="name">Full name <span class="req">*</span></label><input id="name" name="name" autocomplete="name" required><span class="err">Enter your full name.</span></div>
-        <div class="field"><label for="org">Organisation</label><input id="org" name="organisation" autocomplete="organization"></div>
-        <div class="field"><label for="email">Email address <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required><span class="err">Enter a valid email address, like name@example.co.za.</span></div>
-        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel"><span class="hint">Optional. We can WhatsApp you.</span></div>
-        <div class="field full"><label for="role">I am a… <span class="req">*</span></label><select id="role" name="role" required><option value="">Choose one</option>{"".join(f'<option value="{v}">{e(l)}</option>' for v, l in roles)}</select><span class="err">Choose the option that fits you best.</span></div>
-        <div class="field full"><label for="msg">How can we help?</label><textarea id="msg" name="message"></textarea></div>
-        <p class="field full check"><input type="checkbox" id="consent" required><label for="consent">I agree that WOW may contact me about my enquiry.</label></p>
-        <div class="field full"><button class="btn btn-primary" type="submit">Send message</button><p class="err" data-form-error hidden style="display:block;color:var(--red-deep)">We couldn’t send your message. Check your connection and try again.</p></div>
-      </form>
-      <div class="form-done" id="done" tabindex="-1" hidden>{tab("Message sent", "green")}<h3 class="h3">Thank you. Siyabangena!</h3><p class="muted">Your message is with the WOW team, and the right person will contact you.</p>{more("Explore the platform", "platform.html")}</div>
-    </div>
-    <div style="display:grid;gap:28px">
-      <div style="display:grid;gap:16px"><span class="eyebrow">What happens next</span><h2 class="h2">We’ll connect you with the right team.</h2></div>
-      <ul class="points">
-        <li><span class="dot"></span><b>We read every message</b><p>Your enquiry goes to the team that looks after your part of WOW.</p></li>
-        <li><span class="dot"></span><b>We reply with next steps</b><p>That might be a call, a meeting or registration details.</p></li>
-        <li><span class="dot"></span><b>A WOW Agent can meet you at the rank</b><p>Owners, drivers and co-ops can get help in person, in their own language.</p></li>
-      </ul>
-      {photo(R, "WOW_Photo_Agent-At-The-Rank.jpg", "A WOW Agent helps a driver at the rank", "WOW Agents at every rank", "tar")}
-      <p class="card" style="flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap"><span><b>Investor?</b> Request data room access instead.</span>{more("Investors", "investors.html")}</p>
-    </div>
+<section class="sec" aria-labelledby="portals-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Sign in</span><h2 class="h2" id="portals-title">Already part of WOW?</h2></div>
+    <div class="grid2">{portal_cards}</div>
+  </div>
+</section>
+<section class="sec chalk" aria-labelledby="routes-title">
+  <div class="wrap">
+    <div class="sec-head"><span class="eyebrow">Find your way in</span><h2 class="h2" id="routes-title">New to WOW? Start here.</h2>
+      <p class="lead">See what WOW offers you, from fuel rebates and fleet tracking to cashless fares and scholar transport.</p></div>
+    <div class="grid3">{route_cards}</div>
   </div>
 </section>"""
-    return page(R, "get-involved", "Get involved", "Get in touch with WOW: taxi owners, drivers, commuters, co-ops, brands, government and investors.", body,
+    return page(R, "get-involved", "Get involved", "Ways into WOW: the investor data room, the WOW portal for co-ops and teams, and what WOW offers owners, operators, drivers, commuters, brands and government.", body,
                 image="WOW_Photo_Agent-At-The-Rank.jpg", path="get-involved.html")
 
 

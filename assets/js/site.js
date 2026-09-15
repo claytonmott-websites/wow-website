@@ -51,56 +51,5 @@
     if (drawer && !drawer.hidden) { setDrawer(false); menuBtn.focus(); }
   });
 
-  /* Forms: client-side validation. Connect data-endpoint to a real handler before launch. */
-  document.querySelectorAll('form[data-form]').forEach(form => {
-    form.setAttribute('novalidate', '');
-    form.addEventListener('submit', async ev => {
-      ev.preventDefault();
-      let firstBad = null;
-      form.querySelectorAll('.field').forEach(field => {
-        const input = field.querySelector('input,select,textarea');
-        if (!input) return;
-        const bad = !input.checkValidity();
-        field.classList.toggle('invalid', bad);
-        input.setAttribute('aria-invalid', String(bad));
-        if (bad && !firstBad) firstBad = input;
-      });
-      if (firstBad) { firstBad.focus(); return; }
-
-      const endpoint = form.dataset.endpoint;
-      const submit = form.querySelector('[type="submit"]');
-      if (submit) { submit.disabled = true; submit.textContent = 'Sending…'; }
-      try {
-        if (endpoint) {
-          const res = await fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
-          if (!res.ok) throw new Error('Request failed');
-        }
-        const done = document.querySelector(form.dataset.done);
-        form.hidden = true;
-        if (done) { done.hidden = false; done.focus(); }
-      } catch (err) {
-        if (submit) { submit.disabled = false; submit.textContent = 'Try again'; }
-        const msg = form.querySelector('[data-form-error]');
-        if (msg) msg.hidden = false;
-      }
-    });
-    form.querySelectorAll('input,select,textarea').forEach(input =>
-      input.addEventListener('input', () => {
-        const field = input.closest('.field');
-        if (field && field.classList.contains('invalid') && input.checkValidity()) {
-          field.classList.remove('invalid');
-          input.setAttribute('aria-invalid', 'false');
-        }
-      }));
-  });
-
-  /* Preselect the role on the contact form from ?role= links */
-  const role = new URLSearchParams(location.search).get('role');
-  const roleSelect = document.getElementById('role');
-  if (role && roleSelect) {
-    const opt = [...roleSelect.options].find(o => o.value === role);
-    if (opt) roleSelect.value = role;
-  }
-
   document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 })();

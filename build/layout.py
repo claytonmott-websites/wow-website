@@ -18,7 +18,7 @@ AREAS = [
          tagline="Everyday riding and spending becomes entries for real prizes."),
     dict(slug="merchants", n="07", name="Cashless Merchants", short="The ecosystem bridge", accent="green",
          tagline="Rank shops and spazas on the same wallet commuters carry."),
-    dict(slug="wow-fi", n="08", name="WOW-Fi", short="Every taxi a media channel", accent="blue",
+    dict(slug="wow-fi", n="08", name="WOW-Fi", short="Every vehicle a media channel", accent="blue",
          tagline="Free WiFi for commuters. A media business for the industry."),
     dict(slug="scholar", n="09", name="Scholar Transport", short="Safe, verified, paid", accent="yellow",
          tagline="Palm-scan boarding for 120 000+ scholars every school day."),
@@ -27,7 +27,7 @@ AREAS = [
 ]
 
 AUDIENCES = [
-    ("owners", "Taxi owners"), ("drivers", "Drivers"), ("commuters", "Commuters"),
+    ("owners", "Owners & operators"), ("drivers", "Drivers"), ("commuters", "Commuters"),
     ("associations", "Associations & co-ops"), ("brands", "Brands & sponsors"), ("government", "Government"),
 ]
 
@@ -107,7 +107,7 @@ def page_hero(root, eyebrow, title_html, lead, trail, aside="", ground="chalk", 
 
 
 def cta_band(root, title_html="The industry owns the road ahead.",
-             text="WOW is live and rolling out across the Eastern Cape. Owner, driver, co-op, brand or government partner: tell us who you are and we’ll connect you with the right team."):
+             text="WOW is live and rolling out across the Eastern Cape. Owner, operator, driver, co-op, brand or government partner: find your way in."):
     return f"""
 <section class="sec tar cta" aria-labelledby="cta-title">
   {route("#2A2423", 2, 70)}
@@ -172,7 +172,7 @@ def footer(root):
     <div class="ft">
       <div class="ft-brand">
         <img src="{root}assets/logos/WOW_Lockup-Siyabangena_White.svg" alt="WOW! Siyabangena!" width="210" height="82">
-        <p>South Africa’s industry-owned digital operating system for the minibus taxi economy.</p>
+        <p>South Africa’s industry-owned digital operating system for South Africa’s public transport economy.</p>
         <div class="btns">{btn("Get involved", root + "get-involved.html", "white", True, "btn-sm")}</div>
       </div>
       {col("Platform", [("Platform overview", root + "platform.html")] + [(a["name"], f'{root}platform/{a["slug"]}.html') for a in AREAS[:6]])}
@@ -188,7 +188,7 @@ def footer(root):
 </footer>"""
 
 
-def page(root, current, title, description, body, image="WOW_Photo_Owner-Golden-Hour.jpg", path="index.html"):
+def page(root, current, title, description, body, image="WOW_Photo_Operator-At-The-Forecourt.jpg", path="index.html"):
     full_title = f"{title} · WOW — Wealth on Wheels" if current != "home" else title
     return f"""<!doctype html>
 <html lang="en-ZA">
