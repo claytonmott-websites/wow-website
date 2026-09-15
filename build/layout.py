@@ -188,7 +188,7 @@ def footer(root):
 </footer>"""
 
 
-def page(root, current, title, description, body, image="WOW_Photo_Operator-At-The-Forecourt.jpg", path="index.html"):
+def page(root, current, title, description, body, image="WOW_Photo_Operator-Sunrise.jpg", path="index.html"):
     full_title = f"{title} · WOW — Wealth on Wheels" if current != "home" else title
     return f"""<!doctype html>
 <html lang="en-ZA">

@@ -32,16 +32,23 @@ def home():
 
     body = f"""
 <section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow">Wealth on Wheels · Eastern Cape</span>
-      <h1 class="display" id="hero-title">Crafted and <span class="hl">owned</span> by the public transport industry.</h1>
-      <p class="lead">WOW is South Africa’s largest collectively owned public transport structure: one wallet, ten focus areas, and a digital platform the public transport industry owns outright.</p>
-      <div class="btns">{btn("Explore the platform", "platform.html")}{btn("Why WOW", "why-wow.html", "secondary", False)}</div>
-      <p class="muted" style="font-size:15px">Fintech Innovation of the Year, Africa Tech Festival 2024</p>
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="hero-copy">
+        <span class="eyebrow">Wealth on Wheels · Eastern Cape</span>
+        <h1 class="display" id="hero-title">Crafted and <span class="hl">owned</span> by the public transport industry.</h1>
+      </div>
+      <div class="hero-side">
+        <p class="lead">WOW is South Africa’s largest collectively owned public transport structure: one wallet, ten focus areas, and a digital platform the public transport industry owns outright.</p>
+        <div class="btns">{btn("Explore the platform", "platform.html")}{btn("Why WOW", "why-wow.html", "secondary", False)}</div>
+        <p class="muted" style="font-size:15px">Fintech Innovation of the Year, Africa Tech Festival 2024</p>
+      </div>
     </div>
-    <div class="hero-media">
-      {photo(R, "WOW_Photo_Operator-At-The-Forecourt.jpg", "A public transport operator checks his phone beside his minibus at a fuel forecourt at sunset", "#Siyabangena", style="aspect-ratio:4/3.6").replace("<img ", "<img style=\"object-position:30% 50%\" ", 1).replace('loading="lazy"', 'fetchpriority="high"')}
+    <div class="hero-visual">
+      <figure class="hero-wide">
+        <img src="{R}assets/img/WOW_Photo_Operator-Sunrise.jpg" srcset="{R}assets/img/WOW_Photo_Operator-Sunrise-960.jpg 960w, {R}assets/img/WOW_Photo_Operator-Sunrise.jpg 1672w" sizes="(max-width: 1240px) 100vw, 1144px" width="1672" height="941" alt="A public transport operator uses the WOW app on his phone beside his minibus at a fuel forecourt at sunrise, linked to icons for tracking, safety cameras, fuel and the wallet" fetchpriority="high" decoding="async">
+        <span class="tab red">#Siyabangena</span>
+      </figure>
       <div class="hero-card"><b class="num">~67 000</b><span>public transport operators, organised as one</span></div>
     </div>
   </div>

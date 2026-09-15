@@ -42,7 +42,7 @@ python3 -m http.server 8770
 ## Before launch
 
 1. **Add the remaining internal links.** The site has no forms. Calls to action link to the WOW apps: the investor data room (`https://wow.forus.digital/investors`) and the WOW portal (`https://wow.forus.digital/backoffice`). Add links for any other flows (for example owner or driver registration) on `get-involved.html`.
-2. **Replace the photography.** The six images in `assets/img/` are AI-generated concepts. Commission real photography (see brand guide chapter 06) and keep the same file names.
+2. **Replace the concept photography.** The homepage hero (`WOW_Photo_Operator-Sunrise.jpg`) is the client-approved image. The six other images in `assets/img/` are AI-generated concepts. Commission real photography (see brand guide chapter 06) and keep the same file names.
 3. **Confirm facts and figures** with ECTTC, especially the stats, launch dates and partner descriptions.
 4. **Add the missing pages**: privacy policy (POPIA), terms, and the investor data room sign-in if it stays on this domain.
 5. **Set the canonical domain** in `SITE` in `build/layout.py`, then rebuild.
